@@ -1,0 +1,1 @@
+[Sección 2 del curso de TypeScript: Introducción a TypeScript](https://www.udemy.com/course/typescript-guia-completa/learn/lecture/27830986#questions)
