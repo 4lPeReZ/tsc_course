@@ -33,4 +33,10 @@
     console.log(thing.charAt(0), thing2.toFixed(2), { thing3 }, thing3.charAt(0));
     thing3 = 9879.999;
     console.log(thing3.toFixed(2));
+    //Arrays
+    const numbers = [1, 2, 3, 4, 5, '6', 7, 8, 9, 10];
+    numbers.push(11);
+    console.log(numbers);
+    const villians2 = ['Joker', 'Riddler', 'Penguin'];
+    villians2.forEach(v => console.log(v.toUpperCase()));
 })();
