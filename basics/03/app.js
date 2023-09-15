@@ -24,4 +24,13 @@
     console.log(batman.toUpperCase, { greenLantern });
     console.log(`I'm ${batman} and I'm ${greenLantern}`);
     console.log(((_a = batman[10]) === null || _a === void 0 ? void 0 : _a.toUpperCase()) || 'No value');
+    //Any type - Avoid it
+    //any type cannot provide intellisense
+    let thing = 'Hello';
+    let thing2 = 123.123;
+    let thing3 = 555;
+    thing3 = 'Hello';
+    console.log(thing.charAt(0), thing2.toFixed(2), { thing3 }, thing3.charAt(0));
+    thing3 = 9879.999;
+    console.log(thing3.toFixed(2));
 })();
