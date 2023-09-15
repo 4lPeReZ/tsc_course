@@ -49,4 +49,38 @@
 
     const villians2 = ['Joker', 'Riddler', 'Penguin'];
     villians2.forEach(v => console.log(v.toUpperCase()));
+
+    //Tuples
+    const hero:[string, number, boolean] = ['Dr. Strange', 100, true];
+    hero[0] = 'Ironman';
+    hero[1] = 50;
+    hero[2] = false;
+    console.log(hero);
+
+    //Enums
+    //Enums are used to define a set of named constants
+    enum Volume {
+        min = 1,
+        medium = 5,
+        max = 10
+    }
+
+    let audio:Volume = Volume.medium;
+    console.log(audio);
+    console.log(Volume);
+
+    //Void
+    //Void is used to define a function that does not return anything
+    function callBatman():void {
+        console.log('Show bat signal');
+    }
+
+    const callSuperman = ():void => {
+        console.log('Show super signal');
+    }
+    
+    callBatman();
+    callSuperman();
+    
+
 }) ();
