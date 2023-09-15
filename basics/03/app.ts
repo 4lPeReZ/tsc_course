@@ -81,6 +81,24 @@
     
     callBatman();
     callSuperman();
+
+
+    //Never
+    //Never is used to define a function that never returns anything
+    function error(message:string):never {
+        throw new Error(message);
+    }
     
+    error('Error detected');
+
+    //Null
+    //Null is used to define a variable that can have the value null
+    let nullVariable:null = null;
+    console.log({nullVariable});
+
+    //Undefined
+    //Undefined is used to define a variable that can have the value undefined
+    let undefinedVariable:undefined = undefined;
+    console.log({undefinedVariable});
 
 }) ();
