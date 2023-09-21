@@ -7,3 +7,5 @@ Repository for a TypeScript course: Classes and exercises
 - [Link to directory 06.](./basics/06/)
 - [Link to directory 07.](./basics/07/)
 - [Link to directory 08.](./basics/08/)
+- [Link to directory 09.](./basics/09/)
+- [Link to directory 10.](./basics/10/)
