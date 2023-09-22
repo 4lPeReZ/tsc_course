@@ -9,6 +9,7 @@ Repository for a TypeScript course: Classes and exercises
 - [Link to directory 08.](./basics/08/)
 - [Link to directory 09.](./basics/09/)
 - [Link to directory 10.](./basics/10/)
+- [Link to directory 11.](./basics/11/)
 
 Link to directory ts-node project
 - [Link to directory 02.](./ts-node)
