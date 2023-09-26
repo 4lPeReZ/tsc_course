@@ -13,4 +13,4 @@ Repository for a TypeScript course: Classes and exercises
 - [Link to directory 12.](./basics/12/)
 
 Link to directory ts-node project
-- [Link to directory 02.](./ts-node)
+- [Link to directory.](./ts-node)
