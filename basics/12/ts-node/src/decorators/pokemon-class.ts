@@ -9,10 +9,17 @@ const printToConsoleConditional = (print: boolean = false):Function => {
     return () => {};
 }
 
+const bloquearPrototipo = function (constructor: Function) {
+    //Block prototype modification (add new properties)
+/*     Object.seal(constructor);
+    Object.seal(constructor.prototype); */
+}
+// Block prototype
+@bloquearPrototipo
 // Decorator for classes
 /* @printToConsole */
 // Default decorator
-/* @printToConsoleConditional( true ) */
+@printToConsoleConditional( true )
 
 export class Pokemon {
     public publicApi: string = 'https://pokeapi.co';
