@@ -32,6 +32,27 @@ function CheckValidPokemonId() {
     }
 }
 
+// Decorator properties (getters and setters)
+function readOnly(isWritable: boolean = true):Function {
+    return function(target: any, propertyKey: string) {
+        const descriptor: PropertyDescriptor = {
+            get() {
+                console.log(this, 'getter')
+                return 'Alvaro';
+            },
+            set(this, value) {
+                /* console.log(this, value) */
+                Object.defineProperty(this, propertyKey, {
+                    value: value,
+                    writable: !isWritable,
+                })
+            }
+
+        }
+        return descriptor;
+    }
+}
+
 
 // Block prototype
 @bloquearPrototipo
@@ -41,8 +62,10 @@ function CheckValidPokemonId() {
 @printToConsoleConditional( false )
 
 export class Pokemon {
-    public publicApi: string = 'https://pokeapi.co';
+    // Decorator for properties
+    @readOnly(false)
 
+    public publicApi: string = 'https://pokeapi.co';
 
     constructor(
         public name: string,
