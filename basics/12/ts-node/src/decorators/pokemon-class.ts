@@ -14,12 +14,31 @@ const bloquearPrototipo = function (constructor: Function) {
 /*     Object.seal(constructor);
     Object.seal(constructor.prototype); */
 }
+
+// Decorator factory
+function CheckValidPokemonId() {
+    // Decorator method (function)
+    return function ( target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+
+        const originalMethod = descriptor.value;
+
+        descriptor.value = (id:number) => {
+            if (id < 1 || id > 800) {
+                return console.error('Invalid pokemon id');
+            } else {
+                return originalMethod(id);
+            }
+        }
+    }
+}
+
+
 // Block prototype
 @bloquearPrototipo
 // Decorator for classes
 /* @printToConsole */
 // Default decorator
-@printToConsoleConditional( true )
+@printToConsoleConditional( false )
 
 export class Pokemon {
     public publicApi: string = 'https://pokeapi.co';
@@ -28,4 +47,9 @@ export class Pokemon {
     constructor(
         public name: string,
     ) {}
+
+    @CheckValidPokemonId()
+    savePokemonToDB( id:number ) {
+        console.log(`Saving pokemon with id ${id} to DB`);
+    }
 }
